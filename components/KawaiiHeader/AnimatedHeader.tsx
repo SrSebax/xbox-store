@@ -17,8 +17,8 @@ const AnimatedHeader = ({
   <Header size="huge" as="h1" onClick={onClick}>
     Xbox
     <div className="xbox-icon-container">
-      <FontAwesomeIcon icon={faXbox} />
-    </div>    
+      <FontAwesomeIcon icon={faXbox} style={{ fontSize: 40, margin: 0.8, color: '#107C10' }} />   
+    </div>
     Store
     {/* <Transition
       animation="jiggle"

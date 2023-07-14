@@ -26,7 +26,7 @@ const ShoppingCartIcon = ({ cartCount, name }: ShoppingCartIconProps) => {
   return (
     <div className="container">
       {/* <Basket /> */}
-      <AddShoppingCartIcon sx={{ fontSize: 25, margin: 0.8 }} />
+      <AddShoppingCartIcon sx={{ fontSize: 25, margin: 0.8, color: '#107C10' }} />
 
       <div className="text">
         {` ${name} `}

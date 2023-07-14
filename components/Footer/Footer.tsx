@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { Segment, Container, Grid, List, Header } from 'semantic-ui-react'
+import React from 'react';
+import Link from 'next/link';
+import { Segment, Container, Grid, List, Header } from 'semantic-ui-react';
 
 const Footer = () => (
   <Segment
@@ -20,7 +20,7 @@ const Footer = () => (
             <List>
               <List.Item>
                 <Link legacyBehavior href="/about">
-                  <a>Conoce más</a>
+                  <a className="a">Conoce más</a>
                 </Link>
               </List.Item>
             </List>
@@ -30,31 +30,31 @@ const Footer = () => (
             <List>
               <List.Item>
                 <Link legacyBehavior href="/">
-                  <a>Todos los productos</a>
+                  <a className="a">Todos los productos</a>
                 </Link>
               </List.Item>
             </List>
           </Grid.Column>
           <Grid.Column width={7}>
             <Header as="h4">Hecho por
-              <a href="https://www.instagram.com/sebax_lond/"> @sebax_lond</a>
+              <a href="https://www.instagram.com/sebax_lond/" className="a"> @sebax_lond</a>
             </Header>
             <p>Con ayuda de
-              <a href="https://platzi.com/"> Platzi y su curso de Next.JS</a> de
+              <a href="https://platzi.com/" className="a"> Platzi y su curso de Next.JS</a> de
               Platzi dictado por{' '}
-              <a href="https://twitter.com/jonalvarezz">@jonalvarezz</a>
+              <a href="https://twitter.com/jonalvarezz" className="a">@jonalvarezz</a>
             </p>
             <List horizontal style={{ display: 'flex' }}>
               <List.Item
                 icon="instagram"
                 style={{ display: 'flex' }}
-                content={<a href="https://www.instagram.com/sebax_lond/">Instagram</a>}
+                content={<a href="https://www.instagram.com/sebax_lond/" className="a">Instagram</a>}
               />
               <List.Item
                 icon="github"
                 style={{ display: 'flex' }}
                 content={
-                  <a href="https://github.com/SrSebax">
+                  <a href="https://github.com/SrSebax" className="a">
                     GitHub
                   </a>
                 }
@@ -63,41 +63,6 @@ const Footer = () => (
           </Grid.Column>
         </Grid.Row>
       </Grid>
-      {/* <div className="colophon">
-        <p className="colophon-entry">
-          Icons made by{' '}
-          <a
-            target="_blank"
-            href="https://www.flaticon.com/authors/freepik"
-            title="Freepik"
-          >
-            Freepik
-          </a>
-          {' from '}
-          <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </p>
-        <p className="colophon-entry">
-          Avocado images taken from{' '}
-          <a
-            className="acnor"
-            target="_blank"
-            href="https://www.californiaavocado.com/avocado101/avocado-varieties"
-            title="California Avocado"
-          >
-            Avocado 101
-          </a>
-          {' at '}
-          <a
-            target="_blank"
-            href="https://www.californiaavocado.com"
-            title="Flaticon"
-          >
-            California Avocado
-          </a>
-        </p>
-      </div> */}
     </Container>
 
     <style jsx>{`
@@ -110,8 +75,11 @@ const Footer = () => (
         color: grey;
         margin-bottom: 0;
       }
+      .a {
+        color: #107C10;
+      }
     `}</style>
   </Segment>
-)
+);
 
-export default Footer
+export default Footer;

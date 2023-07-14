@@ -27,7 +27,7 @@ const Navbar = () => {
           >
             {/* <Avocado /> */}
             {/* <FontAwesomeIcon icon={faXbox} /> */}
-            <GamesIcon sx={{ fontSize: 25, margin: 0.8 }} />
+            <GamesIcon sx={{ fontSize: 25, margin: 0.8, color: '#107C10' }} />
             Inicio
           </Menu.Item>
         </Link>
@@ -37,17 +37,18 @@ const Navbar = () => {
             active={pathname === '/about'}
             title="Nosotros"
           >
-            <InfoIcon sx={{ fontSize: 25, margin: 0.8 }} />
+            <InfoIcon sx={{ fontSize: 25, margin: 0.8, color: '#107C10' }} />
             Nosotros
           </Menu.Item>
 
         </Link>
 
-        <Link legacyBehavior href="/" passHref >
+        <Link legacyBehavior href="/contact" >
           <Menu.Item
+            active={pathname === '/contact'}
             title="Contacto"
           >
-            <ContactSupportIcon sx={{ fontSize: 25, margin: 0.8 }} />
+            <ContactSupportIcon sx={{ fontSize: 25, margin: 0.8, color: '#107C10' }} />
             Contacto
           </Menu.Item>
 
