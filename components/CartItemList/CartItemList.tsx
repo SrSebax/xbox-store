@@ -19,9 +19,9 @@ const CartItemList = ({
   if (items.length === 0)
     return (
       <Message warning as="section">
-        <Message.Header>Your cart is empty</Message.Header>
+        <Message.Header>Tu carrito esta vacío</Message.Header>
         <p>
-          You will need to add some items to the cart before you can checkout.
+          Deberá agregar algunos artículos al carrito antes de poder pagar.
         </p>
       </Message>
     )
@@ -33,7 +33,7 @@ const CartItemList = ({
       return {
         childKey: id,
         header: (
-          <Link legacyBehavior href="/product/[id]"  as={`/product/${id}/`} passHref >
+          <Link legacyBehavior href="/product/[id]" as={`/product/${id}/`} passHref >
             <Item.Header as="a">{name}</Item.Header>
           </Link>
         ),
@@ -46,7 +46,6 @@ const CartItemList = ({
           />
         ),
         meta: `${quantity} x ${price}`,
-        description: 'Some more information goes here....',
         extra: (
           <Button
             basic

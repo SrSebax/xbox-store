@@ -1,56 +1,43 @@
-import React from 'react'
-import { Image, Header } from 'semantic-ui-react'
-import Layout from '@components/Layout/Layout'
+import React from 'react';
+import { Image, Header } from 'semantic-ui-react';
+import Layout from '@components/Layout/Layout';
 
-const avoFacts = [
+const xboxFacts = [
   {
-    title: 'Most avocados come from Mexico',
+    title: 'Variedad de juegos para todas las edades',
     content:
-      'While avocados are grown in California and Florida, the majority sold in grocery stores come from south central Mexico. The main reason for the abundance of “south of the border” avocados is that Mexico is blessed with a year-round growing climate. The avocado is believed to have originated in the state of Puebla, Mexico, as far back as 10,000 B.C.',
+      'En Xbox Store, ofrecemos una amplia variedad de juegos para todas las edades. Desde emocionantes aventuras hasta desafiantes juegos de estrategia, tenemos algo para cada tipo de jugador.',
   },
   {
-    title: 'The conquistadors were huge fans.',
+    title: 'Accesorios y hardware de Xbox de última generación',
     content:
-      'Spanish explorers arriving in Mexico during the 16th century survived on avocados and were the first Europeans to consume them. As a result of the Spanish Conquest, avocados spread to South America and Central America. ',
+      'Además de videojuegos, también ofrecemos una selección de accesorios y hardware de Xbox de última generación. Desde mandos personalizados hasta auriculares de alta calidad, aquí encontrarás todo lo que necesitas para mejorar tu experiencia de juego.',
   },
   {
-    title: '“Avocado” wasn’t its original name.',
+    title: 'Descuentos y ofertas especiales',
     content:
-      'Irishman Sir Hans Sloane called it an avocado in 1696 in a Jamaican-plants catalog. He also dubbed the avocado tree the “alligator pear tree.”',
+      'En Xbox Store, nos enorgullece ofrecer descuentos y ofertas especiales en juegos y accesorios. Mantente atento a nuestras promociones para obtener grandes descuentos en tus títulos favoritos.',
   },
   {
-    title: 'It’s actually a fruit.',
+    title: 'Comunidad de jugadores apasionados',
     content:
-      'Did you know that an avocado is a fruit? While definitely not sweet, it falls firmly in the fruit-not the vegetable-family. That’s because the avocado tree is part of the flowering-plant family Lauraceae.',
+      'Xbox Store no solo es un lugar para comprar juegos, también es una comunidad de jugadores apasionados. Únete a nosotros y conéctate con otros jugadores, comparte tus logros y descubre nuevas amistades en el mundo del gaming.',
   },
-  {
-    title: 'There’s a secret trick to ripening them up quick',
-    content:
-      'Need to ripen that avocado ASAP? Place it in a brown paper bag with a banana or two. The bananas will release ethylene gas, a natural plant hormone that aids in ripening fruit. On the other hand, check out this guide to learn how to store them for later.',
-  },
-]
+];
 
 const AboutPage = () => {
   return (
     <Layout>
       <section>
-        <Header as="h1" textAlign="center">
-          13 Surprising Facts About Avocados
+        <Header size="huge" as="h1" textAlign="center">
+          Acerca de Xbox Store
         </Header>
-        <figure>
-          <Image src="/images/avocados.jpg" alt="Avocados on a table" />
-          <figcaption>
-            Originally from{' '}
-            <a
-              target="_blank"
-              href="https://www.tasteofhome.com/article/13-surprising-facts-about-avocados/"
-            >
-              Taste of Home
-            </a>
-          </figcaption>
+        <figure style={{ display: 'flex', justifyContent: 'center', marginBottom: '5rem' }}>
+          <Image src="/images/xbox-store.jpg" alt="Xbox Store logo" style={{ height: '220px'}} />
         </figure>
+
         <ol>
-          {avoFacts.map(({ title, content }) => (
+          {xboxFacts.map(({ title, content }) => (
             <li key={title}>
               <h3 className="ui header">{title}</h3>
               <p>{content}</p>
@@ -72,32 +59,24 @@ const AboutPage = () => {
         }
         figcaption {
           margin-top: 0.5rem;
-          font-site: 0.7rem;
+          font-size: 0.7rem;
           color: grey;
         }
 
         ol {
           list-style: none;
-
-          // Look ma! Responsive grid with no Media queries :)
-          // https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
           grid-gap: 4.5rem 3rem;
-
-          // Look ma! A CSS Counter :)
-          // https://moderncss.dev/totally-custom-list-styles/
           counter-reset: orderedlist;
         }
         li::before {
           counter-increment: orderedlist;
           content: counter(orderedlist);
-
-          // Boring stuff
           position: absolute;
           top: -43px;
           left: -5px;
-          color: #cecece;
+          color: #008000;
           font-size: 5rem;
           font-weight: bold;
         }
@@ -106,14 +85,12 @@ const AboutPage = () => {
           position: relative;
         }
         h3:first-child {
-          // why the first-child selector you may ask...
-          // to gain specificity and thus avoid using '!important' :)
           padding-left: 40px;
           margin-bottom: 2rem;
         }
       `}</style>
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

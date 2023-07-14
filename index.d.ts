@@ -11,9 +11,9 @@ type TProductId = string
 
 type TProductAttributes = {
   description: string
-  genre: string
-  platform: string
-  releaseDate: string
+  genero: string
+  plataforma: string
+  fecha: string
 }
 
 type TProduct = {

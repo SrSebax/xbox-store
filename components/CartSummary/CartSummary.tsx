@@ -9,11 +9,12 @@ const CartSummary = ({ totalAmount }: CartSummaryProps) => {
   return (
     <Segment clearing size="large" as="section">
       <span>
-        <strong>Sub total:</strong>
+        <strong>Cantidad de juegos que va a comprar:</strong>
         {` ${totalAmount}`}
       </span>
+      
       <Button color="black" floated="right">
-        Check out
+        Comprar
       </Button>
     </Segment>
   )

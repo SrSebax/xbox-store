@@ -18,8 +18,8 @@ const ProductSummary = ({ product }: ProductSummaryProps) => (
         <Item.Content>
           <Item.Header as="h1">{product.name}</Item.Header>
           <Item.Description>
-            <p>{product.price}</p>
-            <Label>{`SKU: ${product.sku}`}</Label>
+            <p>$ {product.price} COP</p>
+            <Label>{`ID: ${product.sku}`}</Label>
           </Item.Description>
           <Item.Extra>
             <AddToCart product={product} />
